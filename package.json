@@ -4,6 +4,7 @@
   "engines": {
       "vscode": ">=1.85.1"
   },
+  "repository": "https://github.com/fserb/vscode-tasks-language-mode",
   "publisher": "fserb",
   "contributes": {
       "languages": [{
