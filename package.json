@@ -1,0 +1,20 @@
+{
+  "name": "tasks",
+  "version": "0.0.1",
+  "engines": {
+      "vscode": ">=1.85.1"
+  },
+  "publisher": "fserb",
+  "contributes": {
+      "languages": [{
+          "id": "tasks",
+          "aliases": ["tasks"],
+          "extensions": [".tasks"]
+      }],
+      "grammars": [{
+          "language": "tasks",
+          "scopeName": "source.tasks",
+          "path": "./tasks.tmLanguage.json"
+      }]
+  }
+}

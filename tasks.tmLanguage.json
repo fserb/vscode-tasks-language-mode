@@ -1,0 +1,44 @@
+{
+  "fileTypes": ["tasks"],
+  "name": "Tasks",
+  "scopeName": "source.tasks",
+  "patterns": [
+    {
+      "name": "tasks.section",
+      "match": "^\\s*(\\w[^:]*):\\s*$"
+    },
+    {
+      "name": "tasks.dash",
+      "match": "^\\s*(-)\\s*(.*)$",
+      "captures": {
+        "2": {
+          "patterns": [
+            {
+              "name": "tasks.sub",
+              "match": "([a-zA-Z\\s\\-_\\/]*:)(?<!https?:)\\s*(.*)$",
+              "captures": {
+                "2": {
+                  "patterns": [
+                    { "include": "#text" }
+                  ]
+                }
+              }
+            },
+            { "include": "#text" }
+          ]
+        }
+      }
+    },
+    { "include": "#text" }
+  ],
+  "repository": {
+    "text": {
+      "patterns": [
+        {
+          "name": "tasks.text",
+          "match": ".+"
+        }
+      ]
+    }
+  }
+}
